@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://pokeapi.co/api/v2/ability/?limit=20&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 30 Apr 2016 02:30:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da94d8ba1ba060bfcf355245564b6a9d61461983402; expires=Sun, 30-Apr-17
+        02:30:02 GMT; path=/; domain=.pokeapi.co; HttpOnly
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Allow:
+      - GET, HEAD, OPTIONS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 29b791c7cec32525-ORD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"count":251,"next":"http://pokeapi.co/api/v2/ability/?limit=20&offset=20","previous":null,"results":[{"name":"stench","url":"http://pokeapi.co/api/v2/ability/1/"},{"name":"drizzle","url":"http://pokeapi.co/api/v2/ability/2/"},{"name":"speed-boost","url":"http://pokeapi.co/api/v2/ability/3/"},{"name":"battle-armor","url":"http://pokeapi.co/api/v2/ability/4/"},{"name":"sturdy","url":"http://pokeapi.co/api/v2/ability/5/"},{"name":"damp","url":"http://pokeapi.co/api/v2/ability/6/"},{"name":"limber","url":"http://pokeapi.co/api/v2/ability/7/"},{"name":"sand-veil","url":"http://pokeapi.co/api/v2/ability/8/"},{"name":"static","url":"http://pokeapi.co/api/v2/ability/9/"},{"name":"volt-absorb","url":"http://pokeapi.co/api/v2/ability/10/"},{"name":"water-absorb","url":"http://pokeapi.co/api/v2/ability/11/"},{"name":"oblivious","url":"http://pokeapi.co/api/v2/ability/12/"},{"name":"cloud-nine","url":"http://pokeapi.co/api/v2/ability/13/"},{"name":"compound-eyes","url":"http://pokeapi.co/api/v2/ability/14/"},{"name":"insomnia","url":"http://pokeapi.co/api/v2/ability/15/"},{"name":"color-change","url":"http://pokeapi.co/api/v2/ability/16/"},{"name":"immunity","url":"http://pokeapi.co/api/v2/ability/17/"},{"name":"flash-fire","url":"http://pokeapi.co/api/v2/ability/18/"},{"name":"shield-dust","url":"http://pokeapi.co/api/v2/ability/19/"},{"name":"own-tempo","url":"http://pokeapi.co/api/v2/ability/20/"}]}'
+    http_version: 
+  recorded_at: Sat, 30 Apr 2016 02:30:05 GMT
+recorded_with: VCR 3.0.1

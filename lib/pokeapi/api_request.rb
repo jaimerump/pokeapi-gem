@@ -7,10 +7,12 @@ require 'faraday'
 module Pokeapi
   class ApiRequest
 
-    BASE_URL = 'http://pokeapi.co/api/v2'
+    BASE_HOST = 'http://pokeapi.co'
+    BASE_PATH = "/api/v2"
 
-    def initialize(resource_uri)
+    def initialize(resource_uri, query_params = {})
       @resource_uri = self.class.trim_slashes(resource_uri)
+      @query_params = query_params
     end
 
     # Executes the request and parses the result json
@@ -21,7 +23,9 @@ module Pokeapi
     end
 
     def full_url
-      "#{BASE_URL}/#{@resource_uri}/"
+      uri = URI::HTTP.build(path: "#{BASE_PATH}/#{@resource_uri}/",
+                      query: @query_params.map{|key, value| "#{key}=#{value}"}.join('&'))
+      "#{BASE_HOST}#{uri.request_uri}"
     end
 
     private
